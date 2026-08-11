@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+<text x="400.0" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Adoption Growth Over Time (Stacked Area Chart)</text>
+<line x1="80" y1="400.0" x2="540" y2="400.0" stroke="#e0e0e0" stroke-width="1" />
+<text x="70" y="404.0" text-anchor="end" font-size="12" fill="#666">0</text>
+<line x1="80" y1="339.55555555555554" x2="540" y2="339.55555555555554" stroke="#e0e0e0" stroke-width="1" />
+<text x="70" y="343.55555555555554" text-anchor="end" font-size="12" fill="#666">8M</text>
+<line x1="80" y1="279.1111111111111" x2="540" y2="279.1111111111111" stroke="#e0e0e0" stroke-width="1" />
+<text x="70" y="283.1111111111111" text-anchor="end" font-size="12" fill="#666">16M</text>
+<line x1="80" y1="218.66666666666666" x2="540" y2="218.66666666666666" stroke="#e0e0e0" stroke-width="1" />
+<text x="70" y="222.66666666666666" text-anchor="end" font-size="12" fill="#666">24M</text>
+<line x1="80" y1="158.2222222222222" x2="540" y2="158.2222222222222" stroke="#e0e0e0" stroke-width="1" />
+<text x="70" y="162.2222222222222" text-anchor="end" font-size="12" fill="#666">32M</text>
+<line x1="80" y1="97.77777777777777" x2="540" y2="97.77777777777777" stroke="#e0e0e0" stroke-width="1" />
+<text x="70" y="101.77777777777777" text-anchor="end" font-size="12" fill="#666">40M</text>
+<rect x="285.0" y="260.29495199999997" width="50" height="139.705048" fill="#e6550d" rx="2" />
+<rect x="285.0" y="151.9636382222222" width="50" height="108.33131377777777" fill="#31a354" rx="2" />
+<rect x="285.0" y="92.62046888888885" width="50" height="59.343169333333336" fill="#3182bd" rx="2" />
+<line x1="335.0" y1="122.29205355555553" x2="344.0" y2="122.29205355555553" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
+<text x="347.0" y="126.29205355555553" font-size="11" font-weight="bold" fill="#333">openinference: 7.85M (19.3%)</text>
+<line x1="335.0" y1="206.12929511111108" x2="344.0" y2="206.12929511111108" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
+<text x="347.0" y="210.12929511111108" font-size="11" font-weight="bold" fill="#333">opentelemetry: 14.34M (35.2%)</text>
+<line x1="335.0" y1="330.147476" x2="344.0" y2="330.147476" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
+<text x="347.0" y="334.147476" font-size="11" font-weight="bold" fill="#333">openllmetry: 18.49M (45.5%)</text>
+<line x1="310.0" y1="400" x2="310.0" y2="406" stroke="#888" stroke-width="1.5" />
+<text x="310.0" y="422" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">August 2026 (Actuals)</text>
+<line x1="80" y1="60" x2="80" y2="400" stroke="#888" stroke-width="1.5" />
+<line x1="80" y1="400" x2="540" y2="400" stroke="#888" stroke-width="1.5" />
+</svg>
