@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
-<text x="400.0" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">CNCF Repositories Comparison: Contrib vs GenAI</text>
+<text x="400.0" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">OTel Contrib vs GenAI</text>
 <line x1="80" y1="360.0" x2="650" y2="360.0" stroke="#e0e0e0" stroke-width="1" />
 <text x="70" y="364.0" text-anchor="end" font-size="12" fill="#666">0</text>
 <line x1="80" y1="271.42857142857144" x2="650" y2="271.42857142857144" stroke="#e0e0e0" stroke-width="1" />

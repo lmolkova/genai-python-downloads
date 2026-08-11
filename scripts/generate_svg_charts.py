@@ -142,7 +142,7 @@ def generate_contrib_vs_genai_chart(reports):
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">'
     ]
     
-    svg.append(f'<text x="{width/2}" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">CNCF Repositories Comparison: Contrib vs GenAI</text>')
+    svg.append(f'<text x="{width/2}" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">OTel Contrib vs GenAI</text>')
     
     # Grid lines & Y-axis labels
     for i in range(5):
@@ -224,7 +224,7 @@ def generate_stacked_area_chart(reports, date_collected):
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">'
     ]
     
-    svg.append(f'<text x="{width/2}" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Adoption Growth Over Time (Stacked Area Chart)</text>')
+    svg.append(f'<text x="{width/2}" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Adoption Growth Over Time</text>')
     
     # Grid lines & Y-axis labels
     for i in range(6):
