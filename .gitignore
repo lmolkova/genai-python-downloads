@@ -28,3 +28,8 @@ env/
 .idea/
 *.swp
 *.swo
+
+# Internal reports and data
+internal_adoption_charts.md
+historical_growth_over_time.svg
+historical_downloads.json
