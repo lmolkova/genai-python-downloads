@@ -191,36 +191,48 @@ def generate_contrib_vs_genai_chart(reports):
     svg.append('</svg>')
     return "\n".join(svg)
 
-def generate_stacked_area_chart(reports, date_collected):
+def generate_stacked_area_chart(json_data):
     sources = ["openllmetry", "opentelemetry", "openinference"]
     
-    # Calculate aggregate downloads dynamically from the latest report
-    downloads = {src: 0 for src in sources}
-    for lib, pkgs in reports.items():
-        if lib == "util":
-            continue
-        for pkg in pkgs:
-            src = pkg["source"]
-            val = pkg["downloads_last_month"]
-            if src in ["python-genai", "python-contrib"]:
-                downloads["opentelemetry"] += val
-            elif src in downloads:
-                downloads[src] += val
-                
-    total = sum(downloads.values())
+    # Calculate downloads for each snapshot
+    data_by_date = []
+    max_total = 0
     
+    for entry in json_data:
+        date_collected = entry.get("date_collected", "")
+        reports = entry.get("reports", {})
+        downloads = {src: 0 for src in sources}
+        for lib, pkgs in reports.items():
+            if lib == "util":
+                continue
+            for pkg in pkgs:
+                src = pkg["source"]
+                val = pkg["downloads_last_month"]
+                if src in ["python-genai", "python-contrib"]:
+                    downloads["opentelemetry"] += val
+                elif src in downloads:
+                    downloads[src] += val
+        total = sum(downloads.values())
+        if total > max_total:
+            max_total = total
+        data_by_date.append({
+            "date": date_collected,
+            "downloads": downloads,
+            "total": total
+        })
+        
     width = 800
     height = 450
     padding_left = 80
-    padding_right = 260
+    padding_right = 200
     padding_top = 60
-    padding_bottom = 50
+    padding_bottom = 60
     
     plot_width = width - padding_left - padding_right
     plot_height = height - padding_top - padding_bottom
     
-    # Max value scale is 45M (total August is ~40.6M)
-    max_y = 45000000
+    # Round max_total up to next 5M
+    max_y = max(40000000, ((max_total // 5000000) + 1) * 5000000)
     
     svg = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="100%" height="100%" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">'
@@ -229,70 +241,99 @@ def generate_stacked_area_chart(reports, date_collected):
     svg.append(f'<text x="{width/2}" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Adoption Growth Over Time</text>')
     
     # Grid lines & Y-axis labels
-    for i in range(6):
-        y_val = i * 8000000
+    num_grid_lines = 6
+    for i in range(num_grid_lines):
+        y_val = i * (max_y / (num_grid_lines - 1))
         y_pos = padding_top + plot_height - (y_val / max_y * plot_height)
         label = f"{y_val/1000000:.0f}M" if y_val > 0 else "0"
         svg.append(f'<line x1="{padding_left}" y1="{y_pos}" x2="{padding_left + plot_width}" y2="{y_pos}" stroke="#e0e0e0" stroke-width="1" />')
         svg.append(f'<text x="{padding_left - 10}" y="{y_pos + 4}" text-anchor="end" font-size="12" fill="#666">{label}</text>')
         
-    # X coordinate of the single vertical line (middle of the plot)
-    x_pos = padding_left + plot_width / 2
-    bar_width = 50
-    x_start = x_pos - bar_width / 2
-    
-    # Calculate heights and positions of segments on the vertical stacked line/column
+    num_points = len(data_by_date)
     y_base = padding_top + plot_height
     
-    # 1. openllmetry segment
-    h_llmetry = (downloads["openllmetry"] / max_y) * plot_height
-    y_llmetry = y_base - h_llmetry
-    svg.append(f'<rect x="{x_start}" y="{y_llmetry}" width="{bar_width}" height="{h_llmetry}" fill="{colors["openllmetry"]}" rx="2" />')
-    
-    # 2. opentelemetry segment
-    h_otel = (downloads["opentelemetry"] / max_y) * plot_height
-    y_otel = y_llmetry - h_otel
-    svg.append(f'<rect x="{x_start}" y="{y_otel}" width="{bar_width}" height="{h_otel}" fill="{colors["opentelemetry"]}" rx="2" />')
-    
-    # 3. openinference segment
-    h_inf = (downloads["openinference"] / max_y) * plot_height
-    y_inf = y_otel - h_inf
-    svg.append(f'<rect x="{x_start}" y="{y_inf}" width="{bar_width}" height="{h_inf}" fill="{colors["openinference"]}" rx="2" />')
-    
-    # Precise value labels pointing to each segment on the vertical line
-    label_x = x_pos + bar_width / 2 + 12
-    
-    # Label openinference
-    y_mid_inf = y_inf + h_inf / 2
-    pct_inf = (downloads["openinference"] / total * 100) if total > 0 else 0
-    svg.append(f'<line x1="{x_pos + bar_width/2}" y1="{y_mid_inf}" x2="{label_x - 3}" y2="{y_mid_inf}" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />')
-    svg.append(f'<text x="{label_x}" y="{y_mid_inf + 4}" font-size="11" font-weight="bold" fill="#333">openinference: {format_val(downloads["openinference"])} ({pct_inf:.1f}%)</text>')
-    
-    # Label opentelemetry
-    y_mid_otel = y_otel + h_otel / 2
-    pct_otel = (downloads["opentelemetry"] / total * 100) if total > 0 else 0
-    svg.append(f'<line x1="{x_pos + bar_width/2}" y1="{y_mid_otel}" x2="{label_x - 3}" y2="{y_mid_otel}" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />')
-    svg.append(f'<text x="{label_x}" y="{y_mid_otel + 4}" font-size="11" font-weight="bold" fill="#333">opentelemetry: {format_val(downloads["opentelemetry"])} ({pct_otel:.1f}%)</text>')
-    
-    # Label openllmetry
-    y_mid_llmetry = y_llmetry + h_llmetry / 2
-    pct_llmetry = (downloads["openllmetry"] / total * 100) if total > 0 else 0
-    svg.append(f'<line x1="{x_pos + bar_width/2}" y1="{y_mid_llmetry}" x2="{label_x - 3}" y2="{y_mid_llmetry}" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />')
-    svg.append(f'<text x="{label_x}" y="{y_mid_llmetry + 4}" font-size="11" font-weight="bold" fill="#333">openllmetry: {format_val(downloads["openllmetry"])} ({pct_llmetry:.1f}%)</text>')
-
-    # Dynamic date label for X-axis tick
-    try:
-        dt = datetime.strptime(date_collected, "%Y-%m-%d")
-        date_label = dt.strftime("%B %Y")
-    except Exception:
-        date_label = date_collected
+    if num_points == 1:
+        # Single point vertical column layout
+        pt = data_by_date[0]
+        x_pos = padding_left + plot_width / 2
+        bar_width = 50
+        x_start = x_pos - bar_width / 2
         
-    svg.append(f'<line x1="{x_pos}" y1="{y_base}" x2="{x_pos}" y2="{y_base + 6}" stroke="#888" stroke-width="1.5" />')
-    svg.append(f'<text x="{x_pos}" y="{y_base + 22}" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">{date_label} (Actuals)</text>')
+        h_llmetry = (pt["downloads"]["openllmetry"] / max_y) * plot_height
+        y_llmetry = y_base - h_llmetry
+        svg.append(f'<rect x="{x_start}" y="{y_llmetry}" width="{bar_width}" height="{h_llmetry}" fill="{colors["openllmetry"]}" rx="2" />')
+        
+        h_otel = (pt["downloads"]["opentelemetry"] / max_y) * plot_height
+        y_otel = y_llmetry - h_otel
+        svg.append(f'<rect x="{x_start}" y="{y_otel}" width="{bar_width}" height="{h_otel}" fill="{colors["opentelemetry"]}" rx="2" />')
+        
+        h_inf = (pt["downloads"]["openinference"] / max_y) * plot_height
+        y_inf = y_otel - h_inf
+        svg.append(f'<rect x="{x_start}" y="{y_inf}" width="{bar_width}" height="{h_inf}" fill="{colors["openinference"]}" rx="2" />')
+        
+        label_x = x_pos + bar_width / 2 + 12
+        for src, y_seg, h_seg in [
+            ("openinference", y_inf, h_inf),
+            ("opentelemetry", y_otel, h_otel),
+            ("openllmetry", y_llmetry, h_llmetry)
+        ]:
+            y_mid = y_seg + h_seg / 2
+            pct = (pt["downloads"][src] / pt["total"] * 100) if pt["total"] > 0 else 0
+            svg.append(f'<line x1="{x_pos + bar_width/2}" y1="{y_mid}" x2="{label_x - 3}" y2="{y_mid}" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />')
+            svg.append(f'<text x="{label_x}" y="{y_mid + 4}" font-size="11" font-weight="bold" fill="#333">{src}: {format_val(pt["downloads"][src])} ({pct:.1f}%)</text>')
+            
+        try:
+            date_label = datetime.strptime(pt["date"], "%Y-%m-%d").strftime("%b %d, %Y")
+        except Exception:
+            date_label = pt["date"]
+        svg.append(f'<line x1="{x_pos}" y1="{y_base}" x2="{x_pos}" y2="{y_base + 6}" stroke="#888" stroke-width="1.5" />')
+        svg.append(f'<text x="{x_pos}" y="{y_base + 22}" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">{date_label}</text>')
+    else:
+        # Multi-point stacked area
+        x_coords = [padding_left + i * (plot_width / (num_points - 1)) for i in range(num_points)]
+        stacked_baselines = [[0]*num_points for _ in range(len(sources) + 1)]
+        for p_idx, pt in enumerate(data_by_date):
+            current_sum = 0
+            for s_idx, src in enumerate(sources):
+                current_sum += pt["downloads"][src]
+                stacked_baselines[s_idx + 1][p_idx] = current_sum
+                
+        for s_idx in range(len(sources)):
+            src = sources[s_idx]
+            points = []
+            for p_idx in range(num_points):
+                x = x_coords[p_idx]
+                y = y_base - (stacked_baselines[s_idx + 1][p_idx] / max_y * plot_height)
+                points.append(f"{x},{y}")
+            for p_idx in range(num_points - 1, -1, -1):
+                x = x_coords[p_idx]
+                y = y_base - (stacked_baselines[s_idx][p_idx] / max_y * plot_height)
+                points.append(f"{x},{y}")
+            points_str = " ".join(points)
+            svg.append(f'<polygon points="{points_str}" fill="{colors[src]}" opacity="0.85" />')
+            
+        for p_idx, pt in enumerate(data_by_date):
+            x = x_coords[p_idx]
+            svg.append(f'<line x1="{x}" y1="{y_base}" x2="{x}" y2="{y_base + 6}" stroke="#888" stroke-width="1.5" />')
+            try:
+                date_label = datetime.strptime(pt["date"], "%Y-%m-%d").strftime("%b %d")
+            except Exception:
+                date_label = pt["date"]
+            svg.append(f'<text x="{x}" y="{y_base + 22}" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">{date_label}</text>')
+            
+        # Legend for multi-point
+        latest_pt = data_by_date[-1]
+        legend_x = width - padding_right + 20
+        for idx, src in enumerate(reversed(sources)):
+            legend_y = padding_top + idx * 35
+            latest_val = latest_pt["downloads"][src]
+            latest_pct = (latest_val / latest_pt["total"] * 100) if latest_pt["total"] > 0 else 0
+            svg.append(f'<rect x="{legend_x}" y="{legend_y}" width="18" height="18" fill="{colors[src]}" rx="3" />')
+            svg.append(f'<text x="{legend_x + 25}" y="{legend_y + 14}" font-size="12" fill="#333">{escape_xml(src)}</text>')
+            svg.append(f'<text x="{legend_x + 25}" y="{legend_y + 28}" font-size="10.5" fill="#666">{latest_pct:.1f}% ({format_val(latest_val)})</text>')
 
     svg.append(f'<line x1="{padding_left}" y1="{padding_top}" x2="{padding_left}" y2="{y_base}" stroke="#888" stroke-width="1.5" />')
     svg.append(f'<line x1="{padding_left}" y1="{y_base}" x2="{padding_left + plot_width}" y2="{y_base}" stroke="#888" stroke-width="1.5" />')
-
     svg.append('</svg>')
     return "\n".join(svg)
 
@@ -301,13 +342,14 @@ def main():
     with open(JSON_PATH, "r") as f:
         json_data = json.load(f)
         
-    latest_report = json_data[0]["reports"]
-    date_collected = json_data[0]["date_collected"]
+    latest_entry = json_data[-1]
+    latest_report = latest_entry["reports"]
+    date_collected = latest_entry["date_collected"]
     
     # Generate SVGs
     grouped_bar_svg = generate_grouped_bar_chart(latest_report)
     contrib_vs_genai_svg = generate_contrib_vs_genai_chart(latest_report)
-    stacked_area_svg = generate_stacked_area_chart(latest_report, date_collected)
+    stacked_area_svg = generate_stacked_area_chart(json_data)
     
     # Save SVGs to workspace directory
     compare_adoption_path = os.path.join(REPO_ROOT, "compare_adoption_across_sources.svg")

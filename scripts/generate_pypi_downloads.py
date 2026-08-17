@@ -133,15 +133,40 @@ def main():
     for inst, pkgs in report_by_instruments.items():
         pkgs.sort(key=lambda x: x["downloads_last_month"], reverse=True)
         
+
     report = {
         "date_collected": datetime.now().strftime("%Y-%m-%d"),
         "reports": report_by_instruments
     }
     
-    with open(JSON_PATH, "w") as f:
-        json.dump([report], f, indent=2)
+    # Load existing history if present
+    history = []
+    if os.path.exists(JSON_PATH):
+        try:
+            with open(JSON_PATH, "r") as f:
+                loaded = json.load(f)
+                if isinstance(loaded, list):
+                    history = loaded
+        except Exception:
+            history = []
+            
+    # Update today's entry if already present, or append
+    today = report["date_collected"]
+    updated = False
+    for i, entry in enumerate(history):
+        if entry.get("date_collected") == today:
+            history[i] = report
+            updated = True
+            break
+            
+    if not updated:
+        history.append(report)
         
-    print(f"Success: Updated {JSON_PATH}")
+    with open(JSON_PATH, "w") as f:
+        json.dump(history, f, indent=2)
+        
+    print(f"Success: Appended/Updated {today} report in {JSON_PATH} (Total snapshots: {len(history)})")
+
 
 if __name__ == "__main__":
     main()
