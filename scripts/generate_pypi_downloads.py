@@ -10,8 +10,6 @@ REPO_ROOT = os.path.dirname(SCRIPT_DIR)
 JSON_PATH = os.path.join(REPO_ROOT, "pypi_downloads.json")
 
 packages_config = [
-    # utils
-    {"package_name": "opentelemetry-util-genai", "source": "python-genai"},
     
     # google-genai
     {"package_name": "opentelemetry-instrumentation-google-genai", "instruments": "google-genai", "source": "python-genai"},

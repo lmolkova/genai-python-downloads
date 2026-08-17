@@ -2,15 +2,6 @@
   {
     "date_collected": "2026-08-11",
     "reports": {
-      "util": [
-        {
-          "package_name": "opentelemetry-util-genai",
-          "pypi_link": "https://pypi.org/project/opentelemetry-util-genai/",
-          "latest_version": "1.0b0",
-          "downloads_last_month": 6748098,
-          "source": "python-genai"
-        }
-      ],
       "google-genai": [
         {
           "package_name": "opentelemetry-instrumentation-google-genai",
@@ -145,15 +136,6 @@
   {
     "date_collected": "2026-08-17",
     "reports": {
-      "util": [
-        {
-          "package_name": "opentelemetry-util-genai",
-          "pypi_link": "https://pypi.org/project/opentelemetry-util-genai/",
-          "latest_version": "1.0b0",
-          "downloads_last_month": 7956748,
-          "source": "python-genai"
-        }
-      ],
       "google-genai": [
         {
           "package_name": "opentelemetry-instrumentation-google-genai",
