@@ -1,13 +1,13 @@
 [
   {
-    "date_collected": "2026-08-11",
+    "date_collected": "2026-08-17",
     "reports": {
       "util": [
         {
           "package_name": "opentelemetry-util-genai",
           "pypi_link": "https://pypi.org/project/opentelemetry-util-genai/",
           "latest_version": "1.0b0",
-          "downloads_last_month": 6748098,
+          "downloads_last_month": 7956748,
           "source": "python-genai"
         }
       ],
@@ -16,21 +16,21 @@
           "package_name": "opentelemetry-instrumentation-google-genai",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-google-genai/",
           "latest_version": "1.0b1",
-          "downloads_last_month": 2923567,
+          "downloads_last_month": 4193267,
           "source": "python-genai"
         },
         {
           "package_name": "opentelemetry-instrumentation-google-generativeai",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-google-generativeai/",
           "latest_version": "0.62.3",
-          "downloads_last_month": 2542931,
+          "downloads_last_month": 2489139,
           "source": "openllmetry"
         },
         {
           "package_name": "openinference-instrumentation-google-genai",
           "pypi_link": "https://pypi.org/project/openinference-instrumentation-google-genai/",
           "latest_version": "1.4.0",
-          "downloads_last_month": 646205,
+          "downloads_last_month": 650158,
           "source": "openinference"
         }
       ],
@@ -39,28 +39,28 @@
           "package_name": "opentelemetry-instrumentation-openai-agents-v2",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-openai-agents-v2/",
           "latest_version": "0.1.0",
-          "downloads_last_month": 2853690,
+          "downloads_last_month": 2915638,
           "source": "python-contrib"
         },
         {
           "package_name": "opentelemetry-instrumentation-openai-agents",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-openai-agents/",
           "latest_version": "0.62.3",
-          "downloads_last_month": 2032403,
+          "downloads_last_month": 2004514,
           "source": "openllmetry"
         },
         {
           "package_name": "openinference-instrumentation-openai-agents",
           "pypi_link": "https://pypi.org/project/openinference-instrumentation-openai-agents/",
           "latest_version": "2.0.0",
-          "downloads_last_month": 1223822,
+          "downloads_last_month": 1399637,
           "source": "openinference"
         },
         {
           "package_name": "opentelemetry-instrumentation-genai-openai-agents",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-genai-openai-agents/",
           "latest_version": "1.0b0",
-          "downloads_last_month": 1186,
+          "downloads_last_month": 2191,
           "source": "python-genai"
         }
       ],
@@ -69,28 +69,28 @@
           "package_name": "opentelemetry-instrumentation-openai",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-openai/",
           "latest_version": "0.62.3",
-          "downloads_last_month": 4172634,
+          "downloads_last_month": 4128349,
           "source": "openllmetry"
         },
         {
           "package_name": "openinference-instrumentation-openai",
           "pypi_link": "https://pypi.org/project/openinference-instrumentation-openai/",
           "latest_version": "0.1.54",
-          "downloads_last_month": 2183409,
+          "downloads_last_month": 2175836,
           "source": "openinference"
         },
         {
           "package_name": "opentelemetry-instrumentation-openai-v2",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-openai-v2/",
           "latest_version": "2.4b0",
-          "downloads_last_month": 1802333,
+          "downloads_last_month": 1776706,
           "source": "python-contrib"
         },
         {
           "package_name": "opentelemetry-instrumentation-genai-openai",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-genai-openai/",
           "latest_version": "1.0b0",
-          "downloads_last_month": 5423,
+          "downloads_last_month": 7312,
           "source": "python-genai"
         }
       ],
@@ -99,21 +99,21 @@
           "package_name": "opentelemetry-instrumentation-langchain",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-langchain/",
           "latest_version": "0.62.3",
-          "downloads_last_month": 5475509,
+          "downloads_last_month": 4720379,
           "source": "openllmetry"
         },
         {
           "package_name": "openinference-instrumentation-langchain",
           "pypi_link": "https://pypi.org/project/openinference-instrumentation-langchain/",
           "latest_version": "0.1.70",
-          "downloads_last_month": 3171052,
+          "downloads_last_month": 2950211,
           "source": "openinference"
         },
         {
           "package_name": "opentelemetry-instrumentation-genai-langchain",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-genai-langchain/",
           "latest_version": "1.0b0",
-          "downloads_last_month": 1079,
+          "downloads_last_month": 1288,
           "source": "python-genai"
         }
       ],
@@ -122,21 +122,21 @@
           "package_name": "opentelemetry-instrumentation-anthropic",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-anthropic/",
           "latest_version": "0.62.3",
-          "downloads_last_month": 4266897,
+          "downloads_last_month": 4247240,
           "source": "openllmetry"
         },
         {
           "package_name": "openinference-instrumentation-anthropic",
           "pypi_link": "https://pypi.org/project/openinference-instrumentation-anthropic/",
           "latest_version": "1.1.2",
-          "downloads_last_month": 629755,
+          "downloads_last_month": 608998,
           "source": "openinference"
         },
         {
           "package_name": "opentelemetry-instrumentation-genai-anthropic",
           "pypi_link": "https://pypi.org/project/opentelemetry-instrumentation-genai-anthropic/",
           "latest_version": "1.0b0",
-          "downloads_last_month": 2592,
+          "downloads_last_month": 3298,
           "source": "python-genai"
         }
       ]

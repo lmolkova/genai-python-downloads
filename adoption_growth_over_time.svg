@@ -12,15 +12,15 @@
 <text x="70" y="162.2222222222222" text-anchor="end" font-size="12" fill="#666">32M</text>
 <line x1="80" y1="97.77777777777777" x2="540" y2="97.77777777777777" stroke="#e0e0e0" stroke-width="1" />
 <text x="70" y="101.77777777777777" text-anchor="end" font-size="12" fill="#666">40M</text>
-<rect x="285.0" y="260.29495199999997" width="50" height="139.705048" fill="#e6550d" rx="2" />
-<rect x="285.0" y="151.9636382222222" width="50" height="108.33131377777777" fill="#31a354" rx="2" />
-<rect x="285.0" y="92.62046888888885" width="50" height="59.343169333333336" fill="#3182bd" rx="2" />
-<line x1="335.0" y1="122.29205355555553" x2="344.0" y2="122.29205355555553" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
-<text x="347.0" y="126.29205355555553" font-size="11" font-weight="bold" fill="#333">openinference: 7.85M (19.3%)</text>
-<line x1="335.0" y1="206.12929511111108" x2="344.0" y2="206.12929511111108" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
-<text x="347.0" y="210.12929511111108" font-size="11" font-weight="bold" fill="#333">opentelemetry: 14.34M (35.2%)</text>
-<line x1="335.0" y1="330.147476" x2="344.0" y2="330.147476" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
-<text x="347.0" y="334.147476" font-size="11" font-weight="bold" fill="#333">openllmetry: 18.49M (45.5%)</text>
+<rect x="285.0" y="267.10064133333333" width="50" height="132.89935866666667" fill="#e6550d" rx="2" />
+<rect x="285.0" y="139.740812" width="50" height="127.35982933333334" fill="#31a354" rx="2" />
+<rect x="285.0" y="80.9220208888889" width="50" height="58.81879111111111" fill="#3182bd" rx="2" />
+<line x1="335.0" y1="110.33141644444444" x2="344.0" y2="110.33141644444444" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
+<text x="347.0" y="114.33141644444444" font-size="11" font-weight="bold" fill="#333">openinference: 7.78M (18.4%)</text>
+<line x1="335.0" y1="203.42072666666667" x2="344.0" y2="203.42072666666667" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
+<text x="347.0" y="207.42072666666667" font-size="11" font-weight="bold" fill="#333">opentelemetry: 16.86M (39.9%)</text>
+<line x1="335.0" y1="333.55032066666666" x2="344.0" y2="333.55032066666666" stroke="#777" stroke-dasharray="2,2" stroke-width="1" />
+<text x="347.0" y="337.55032066666666" font-size="11" font-weight="bold" fill="#333">openllmetry: 17.59M (41.7%)</text>
 <line x1="310.0" y1="400" x2="310.0" y2="406" stroke="#888" stroke-width="1.5" />
 <text x="310.0" y="422" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">August 2026 (Actuals)</text>
 <line x1="80" y1="60" x2="80" y2="400" stroke="#888" stroke-width="1.5" />
