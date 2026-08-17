@@ -197,6 +197,8 @@ def generate_stacked_area_chart(reports, date_collected):
     # Calculate aggregate downloads dynamically from the latest report
     downloads = {src: 0 for src in sources}
     for lib, pkgs in reports.items():
+        if lib == "util":
+            continue
         for pkg in pkgs:
             src = pkg["source"]
             val = pkg["downloads_last_month"]
