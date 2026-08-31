@@ -11,16 +11,16 @@
 <line x1="80" y1="5.714285714285722" x2="650" y2="5.714285714285722" stroke="#e0e0e0" stroke-width="1" />
 <text x="70" y="9.714285714285722" text-anchor="end" font-size="12" fill="#666">4.0M</text>
 <text x="222.5" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">openai-agents</text>
-<rect x="149.25" y="98.62447428571426" width="71.25" height="261.37552571428574" fill="#74c476" rx="2" />
-<text x="184.875" y="92.62447428571426" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">2.95M</text>
-<title>python-contrib: 2,951,014</title>
-<rect x="224.5" y="359.62720285714283" width="71.25" height="0.3727971428571428" fill="#de2d26" rx="2" />
-<text x="260.125" y="353.62720285714283" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">4.2k</text>
-<title>python-genai: 4,209</title>
+<rect x="149.25" y="118.3496857142857" width="71.25" height="241.6503142857143" fill="#74c476" rx="2" />
+<text x="184.875" y="112.3496857142857" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">2.73M</text>
+<title>python-contrib: 2,728,310</title>
+<rect x="224.5" y="359.37140857142856" width="71.25" height="0.6285914285714286" fill="#de2d26" rx="2" />
+<text x="260.125" y="353.37140857142856" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">7.1k</text>
+<title>python-genai: 7,097</title>
 <text x="507.5" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">openai</text>
-<rect x="434.25" y="210.54404" width="71.25" height="149.45596" fill="#74c476" rx="2" />
-<text x="469.875" y="204.54404" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">1.69M</text>
-<title>python-contrib: 1,687,406</title>
+<rect x="434.25" y="223.5879542857143" width="71.25" height="136.4120457142857" fill="#74c476" rx="2" />
+<text x="469.875" y="217.5879542857143" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">1.54M</text>
+<title>python-contrib: 1,540,136</title>
 <rect x="509.5" y="359.2165857142857" width="71.25" height="0.7834142857142857" fill="#de2d26" rx="2" />
 <text x="545.125" y="353.2165857142857" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">8.8k</text>
 <title>python-genai: 8,845</title>
