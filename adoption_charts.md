@@ -11,7 +11,7 @@ This dashboard visualizes the PyPI download statistics for the Generative AI ins
 
 This chart shows the total aggregate monthly downloads for each package source.
 > [!NOTE]
-> Currently displays a single vertical stacked line representing the actual compiled data point for August 2026.
+> Currently displays a single vertical stacked line representing the actual compiled data point for September 2026.
 
 ![Adoption Growth Over Time](./adoption_growth_over_time.svg)
 
@@ -35,4 +35,4 @@ This chart compares the downloads last month for the legacy `python-contrib` pac
 
 ---
 
-*Charts generated on: 2026-08-31*
+*Charts generated on: 2026-09-07*
