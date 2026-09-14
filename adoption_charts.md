@@ -35,4 +35,4 @@ This chart compares the downloads last month for the legacy `python-contrib` pac
 
 ---
 
-*Charts generated on: 2026-09-07*
+*Charts generated on: 2026-09-14*

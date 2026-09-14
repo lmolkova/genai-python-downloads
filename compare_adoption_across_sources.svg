@@ -17,9 +17,9 @@
 <line x1="80" y1="60.0" x2="650" y2="60.0" stroke="#e0e0e0" stroke-width="1" />
 <text x="70" y="64.0" text-anchor="end" font-size="12" fill="#666">7M</text>
 <text x="147.0" y="430" transform="rotate(-25 147.0 430)" text-anchor="end" font-size="11" font-weight="600" fill="#333">google-genai</text>
-<rect x="95.1" y="377.85075" width="26.599999999999998" height="32.14925" fill="#3182bd" rx="2" />
-<text x="108.39999999999999" y="373.85075" transform="rotate(-45 108.39999999999999 373.85075)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">643.0k</text>
-<title>openinference: 642,985</title>
+<rect x="95.1" y="379.44985" width="26.599999999999998" height="30.55015" fill="#3182bd" rx="2" />
+<text x="108.39999999999999" y="375.44985" transform="rotate(-45 108.39999999999999 375.44985)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">611.0k</text>
+<title>openinference: 611,003</title>
 <rect x="123.69999999999999" y="307.6046" width="26.599999999999998" height="102.3954" fill="#e6550d" rx="2" />
 <text x="137.0" y="303.6046" transform="rotate(-45 137.0 303.6046)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.05M</text>
 <title>openllmetry: 2,047,908</title>
@@ -27,45 +27,45 @@
 <text x="165.6" y="161.3963" transform="rotate(-45 165.6 161.3963)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">4.89M</text>
 <title>opentelemetry: 4,892,074</title>
 <text x="261.0" y="430" transform="rotate(-25 261.0 430)" text-anchor="end" font-size="11" font-weight="600" fill="#333">openai-agents</text>
-<rect x="209.1" y="333.60015" width="26.599999999999998" height="76.39985" fill="#3182bd" rx="2" />
-<text x="222.4" y="329.60015" transform="rotate(-45 222.4 329.60015)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.53M</text>
-<title>openinference: 1,527,997</title>
-<rect x="237.7" y="330.05925" width="26.599999999999998" height="79.94075" fill="#e6550d" rx="2" />
-<text x="251.0" y="326.05925" transform="rotate(-45 251.0 326.05925)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.60M</text>
-<title>openllmetry: 1,598,815</title>
-<rect x="266.3" y="286.7099" width="26.599999999999998" height="123.2901" fill="#31a354" rx="2" />
-<text x="279.6" y="282.7099" transform="rotate(-45 279.6 282.7099)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.47M</text>
-<title>opentelemetry: 2,465,802</title>
+<rect x="209.1" y="341.30565" width="26.599999999999998" height="68.69435" fill="#3182bd" rx="2" />
+<text x="222.4" y="337.30565" transform="rotate(-45 222.4 337.30565)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.37M</text>
+<title>openinference: 1,373,887</title>
+<rect x="237.7" y="332.47725" width="26.599999999999998" height="77.52275" fill="#e6550d" rx="2" />
+<text x="251.0" y="328.47725" transform="rotate(-45 251.0 328.47725)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.55M</text>
+<title>openllmetry: 1,550,455</title>
+<rect x="266.3" y="286.73105" width="26.599999999999998" height="123.26894999999999" fill="#31a354" rx="2" />
+<text x="279.6" y="282.73105" transform="rotate(-45 279.6 282.73105)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.47M</text>
+<title>opentelemetry: 2,465,379</title>
 <text x="375.0" y="430" transform="rotate(-25 375.0 430)" text-anchor="end" font-size="11" font-weight="600" fill="#333">openai</text>
-<rect x="323.1" y="309.01615" width="26.599999999999998" height="100.98385" fill="#3182bd" rx="2" />
-<text x="336.40000000000003" y="305.01615" transform="rotate(-45 336.40000000000003 305.01615)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.02M</text>
-<title>openinference: 2,019,677</title>
-<rect x="351.70000000000005" y="247.89495" width="26.599999999999998" height="162.10505" fill="#e6550d" rx="2" />
-<text x="365.00000000000006" y="243.89495" transform="rotate(-45 365.00000000000006 243.89495)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">3.24M</text>
-<title>openllmetry: 3,242,101</title>
-<rect x="380.3" y="337.5336" width="26.599999999999998" height="72.46640000000001" fill="#31a354" rx="2" />
-<text x="393.6" y="333.5336" transform="rotate(-45 393.6 333.5336)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.45M</text>
-<title>opentelemetry: 1,449,328</title>
+<rect x="323.1" y="310.57495" width="26.599999999999998" height="99.42505" fill="#3182bd" rx="2" />
+<text x="336.40000000000003" y="306.57495" transform="rotate(-45 336.40000000000003 306.57495)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.99M</text>
+<title>openinference: 1,988,501</title>
+<rect x="351.70000000000005" y="265.3612" width="26.599999999999998" height="144.6388" fill="#e6550d" rx="2" />
+<text x="365.00000000000006" y="261.3612" transform="rotate(-45 365.00000000000006 261.3612)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.89M</text>
+<title>openllmetry: 2,892,776</title>
+<rect x="380.3" y="339.04805" width="26.599999999999998" height="70.95195" fill="#31a354" rx="2" />
+<text x="393.6" y="335.04805" transform="rotate(-45 393.6 335.04805)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">1.42M</text>
+<title>opentelemetry: 1,419,039</title>
 <text x="489.0" y="430" transform="rotate(-25 489.0 430)" text-anchor="end" font-size="11" font-weight="600" fill="#333">langchain</text>
-<rect x="437.1" y="279.4624" width="26.599999999999998" height="130.5376" fill="#3182bd" rx="2" />
-<text x="450.40000000000003" y="275.4624" transform="rotate(-45 450.40000000000003 275.4624)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.61M</text>
-<title>openinference: 2,610,752</title>
+<rect x="437.1" y="293.3656" width="26.599999999999998" height="116.6344" fill="#3182bd" rx="2" />
+<text x="450.40000000000003" y="289.3656" transform="rotate(-45 450.40000000000003 289.3656)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.33M</text>
+<title>openinference: 2,332,688</title>
 <rect x="465.70000000000005" y="260.94259999999997" width="26.599999999999998" height="149.0574" fill="#e6550d" rx="2" />
 <text x="479.00000000000006" y="256.94259999999997" transform="rotate(-45 479.00000000000006 256.94259999999997)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">2.98M</text>
 <title>openllmetry: 2,981,148</title>
-<rect x="494.3" y="409.8276" width="26.599999999999998" height="0.1724" fill="#31a354" rx="2" />
-<text x="507.6" y="405.8276" transform="rotate(-45 507.6 405.8276)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">3.4k</text>
-<title>opentelemetry: 3,448</title>
+<rect x="494.3" y="409.7486" width="26.599999999999998" height="0.2514" fill="#31a354" rx="2" />
+<text x="507.6" y="405.7486" transform="rotate(-45 507.6 405.7486)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">5.0k</text>
+<title>opentelemetry: 5,028</title>
 <text x="603.0" y="430" transform="rotate(-25 603.0 430)" text-anchor="end" font-size="11" font-weight="600" fill="#333">anthropic</text>
 <rect x="551.1" y="380.3985" width="26.599999999999998" height="29.601499999999998" fill="#3182bd" rx="2" />
 <text x="564.4" y="376.3985" transform="rotate(-45 564.4 376.3985)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">592.0k</text>
 <title>openinference: 592,030</title>
-<rect x="579.7" y="214.8634" width="26.599999999999998" height="195.1366" fill="#e6550d" rx="2" />
-<text x="593.0" y="210.8634" transform="rotate(-45 593.0 210.8634)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">3.90M</text>
-<title>openllmetry: 3,902,732</title>
-<rect x="608.3000000000001" y="409.72925" width="26.599999999999998" height="0.27075" fill="#31a354" rx="2" />
-<text x="621.6" y="405.72925" transform="rotate(-45 621.6 405.72925)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">5.4k</text>
-<title>opentelemetry: 5,415</title>
+<rect x="579.7" y="249.3381" width="26.599999999999998" height="160.6619" fill="#e6550d" rx="2" />
+<text x="593.0" y="245.3381" transform="rotate(-45 593.0 245.3381)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">3.21M</text>
+<title>openllmetry: 3,213,238</title>
+<rect x="608.3000000000001" y="409.73995" width="26.599999999999998" height="0.26005" fill="#31a354" rx="2" />
+<text x="621.6" y="405.73995" transform="rotate(-45 621.6 405.73995)" text-anchor="start" font-size="8.5" font-weight="bold" fill="#555">5.2k</text>
+<title>opentelemetry: 5,201</title>
 <rect x="670" y="60" width="18" height="18" fill="#3182bd" rx="3" />
 <text x="695" y="74" font-size="13" fill="#333">openinference</text>
 <rect x="670" y="90" width="18" height="18" fill="#e6550d" rx="3" />
