@@ -11,19 +11,19 @@
 <line x1="80" y1="5.714285714285722" x2="650" y2="5.714285714285722" stroke="#e0e0e0" stroke-width="1" />
 <text x="70" y="9.714285714285722" text-anchor="end" font-size="12" fill="#666">4.0M</text>
 <text x="222.5" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">openai-agents</text>
-<rect x="149.25" y="215.6698457142857" width="71.25" height="144.3301542857143" fill="#74c476" rx="2" />
-<text x="184.875" y="209.6698457142857" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">1.63M</text>
-<title>python-contrib: 1,629,534</title>
-<rect x="224.5" y="358.30802" width="71.25" height="1.69198" fill="#de2d26" rx="2" />
-<text x="260.125" y="352.30802" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">19.1k</text>
-<title>python-genai: 19,103</title>
+<rect x="149.25" y="209.12769428571428" width="71.25" height="150.87230571428572" fill="#74c476" rx="2" />
+<text x="184.875" y="203.12769428571428" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">1.70M</text>
+<title>python-contrib: 1,703,397</title>
+<rect x="224.5" y="358.4686885714286" width="71.25" height="1.5313114285714287" fill="#de2d26" rx="2" />
+<text x="260.125" y="352.4686885714286" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">17.3k</text>
+<title>python-genai: 17,289</title>
 <text x="507.5" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#333">openai</text>
-<rect x="434.25" y="131.71502571428573" width="71.25" height="228.28497428571427" fill="#74c476" rx="2" />
-<text x="469.875" y="125.71502571428573" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">2.58M</text>
-<title>python-contrib: 2,577,411</title>
-<rect x="509.5" y="348.4891685714286" width="71.25" height="11.51083142857143" fill="#de2d26" rx="2" />
-<text x="545.125" y="342.4891685714286" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">130.0k</text>
-<title>python-genai: 129,961</title>
+<rect x="434.25" y="114.40258857142857" width="71.25" height="245.59741142857143" fill="#74c476" rx="2" />
+<text x="469.875" y="108.40258857142857" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">2.77M</text>
+<title>python-contrib: 2,772,874</title>
+<rect x="509.5" y="348.63858857142856" width="71.25" height="11.36141142857143" fill="#de2d26" rx="2" />
+<text x="545.125" y="342.63858857142856" text-anchor="middle" font-size="11" font-weight="bold" fill="#444">128.3k</text>
+<title>python-genai: 128,274</title>
 <rect x="670" y="50" width="18" height="18" fill="#74c476" rx="3" />
 <text x="695" y="64" font-size="13" fill="#333">python-contrib</text>
 <rect x="670" y="80" width="18" height="18" fill="#de2d26" rx="3" />
